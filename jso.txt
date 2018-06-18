@@ -1,0 +1,23 @@
+//for registration localhost:8001/api/register
+{
+
+	"firstname":"pathum",
+
+	"username": "vannikotiya",
+
+	"lastname": "chamara",
+
+	"password_con":"aaaaaa",
+
+	"password": "aaaaaa",
+
+	"email": "pathumd@gmail.com"
+
+}
+
+//for login  localhost:8001/api/login
+{
+	"email": "pathumd@gmail.com"
+,
+	"password": "aaaaaa",	
+}
