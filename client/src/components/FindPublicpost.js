@@ -114,7 +114,7 @@ class findPublicPost extends Component {
                                             </div>
 
 
-                                            <button type="button"  className="btn btn-success btn-sm">Remove</button>
+                                            {/*<button type="button"  className="btn btn-success btn-sm">Remove</button>*/}
                                         </div>
                                     </div>
                                 </div>

@@ -42,6 +42,15 @@ class findPublicPost extends Component {
 
     }
 
+    delmyprojects = () =>{
+        axios
+            .delete('http://localhost:8001/api/delproject?id='+this.state.id)
+            .then(result => {
+               alert("the post deleted")
+                //return this.setState({userdata:result.data,errors:null,sucess:true });
+            });
+    };
+
     getcoloborator = (colloborators) => {
         const coloarray = [];
 
@@ -115,7 +124,7 @@ class findPublicPost extends Component {
                                             </div>
 
 
-                                            <button type="button"  className="btn btn-success btn-sm">Remove</button>
+                                            <button type="button" onClick={this.delmyprojects}  className="btn btn-success btn-sm">Remove</button>
                                         </div>
                                     </div>
                                 </div>

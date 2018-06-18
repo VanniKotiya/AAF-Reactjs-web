@@ -292,12 +292,31 @@ module.exports = function(app){
             _id:id})
             .then(data => {
                 res.status(200).send({success:true, message: "project removed"});
+                console.log(data);
             }).catch(err => {
             res.status(500).send({success:false,  message:"Error:- " + err});
         })
     }
 
-    app.delete('/app/delproject', delproject);
+    app.delete('/api/delproject', delproject);
+
+
+    function deluser (req, res){
+        var id = req.param('id');
+
+        console.log(id);
+
+        Project.remove({
+            _id:id})
+            .then(data => {
+                res.status(200).send({success:true, message: "project removed"});
+                console.log(data);
+            }).catch(err => {
+            res.status(500).send({success:false,  message:"Error:- " + err});
+        })
+    }
+
+    app.delete('/api/deluser', deluser);
 
 
     //--------show my projects---------------------

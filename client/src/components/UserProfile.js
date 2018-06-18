@@ -74,6 +74,17 @@ class userprofile extends Component {
             });
     }
 
+    deluser = () =>{
+        axios
+            .delete('http://localhost:8001/api/deluser?id='+this.state.id)
+            .then(result => {
+                alert("the User deleted")
+                localStorage.clear()
+                return (window.location = "/Page");
+                //return this.setState({userdata:result.data,errors:null,sucess:true });
+            });
+    };
+
 
 
 
@@ -307,6 +318,8 @@ class userprofile extends Component {
                                         <div className="form-group">
 
                                             <button type="submit" className="btn btn-primary btn-block">Update</button>
+                                            <button type="button" onClick={this.deluser} className="btn btn-danger btn-block">delete</button>
+
 
                                         </div>
                                     </div>
